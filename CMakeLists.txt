@@ -1,0 +1,78 @@
+cmake_minimum_required(VERSION 4.1)
+project(CPP_Level_1)
+
+set(CMAKE_CXX_STANDARD 14)
+
+include_directories(CPPF10-Matrix-Fun-with-Matrix-Class)
+include_directories(CPPF11-Profile-Posts)
+include_directories(CPPF4-Cat-Class)
+include_directories(CPPF4-Person-Class)
+include_directories(CPPF4-Person-Class-with-BMI)
+include_directories(CPPF4-Point-Class)
+include_directories(CPPF9-Dynamic-Array-Implementation)
+include_directories(CPPF9-Grocery-List)
+
+add_executable(CPP_Level_1
+        CPP_practice/main.cpp
+        CPP_Structs-Example/main.cpp
+        CPPF-Pointers-Starter/main.cpp
+        CPPF1-ChatBot/main.cpp
+        CPPF1-Input-and-Output-Reference/main.cpp
+        CPPF1-Mad-Libs/main.cpp
+        CPPF1-Primitive-Types-and-Strings-Reference/main.cpp
+        CPPF10-Matrix-Addition/main.cpp
+        CPPF10-Matrix-Fun-with-Matrix-Class/main.cpp
+        CPPF10-Matrix-Fun-with-Matrix-Class/matrix.cpp
+        CPPF10-Matrix-Fun-with-Matrix-Class/matrix.h
+        CPPF11-Profile-Posts/main.cpp
+        CPPF11-Profile-Posts/profile.cpp
+        CPPF11-Profile-Posts/profile.h
+        CPPF2-FizzBuzz/main.cpp
+        CPPF2-For-Loop-Practice/main.cpp
+        CPPF2-Number-Games/main.cpp
+        CPPF2-Rock-Paper-Scissors/main.cpp
+        CPPF2-While-Loop-Practice/main.cpp
+        CPPF3-Function-Practice/main.cpp
+        CPPF3-Number-Guesser/main.cpp
+        CPPF3-Probability-Functions/main.cpp
+        CPPF3-rand-Reference/main.cpp
+        CPPF4-Cat-Class/cat.cpp
+        CPPF4-Cat-Class/cat.h
+        CPPF4-Cat-Class/main.cpp
+        CPPF4-Person-Class/main.cpp
+        CPPF4-Person-Class/person.cpp
+        CPPF4-Person-Class/person.h
+        CPPF4-Person-Class-with-BMI/main.cpp
+        CPPF4-Person-Class-with-BMI/person.cpp
+        CPPF4-Person-Class-with-BMI/person.h
+        CPPF4-Point-Class/main.cpp
+        CPPF4-Point-Class/point.cpp
+        CPPF4-Point-Class/point.h
+        CPPF5-Pointer-Error-Examples/main.cpp
+        CPPF5-Pointer-Practice/main.cpp
+        CPPF5-Pointers/main.cpp
+        CPPF5-Project-2-Assembly-Line/main.cpp
+        CPPF6-Chaos-Monkeys/main.cpp
+        CPPF6-Defanging-a-Website-URL/main.cpp
+        CPPF6-Parameter-Passing/main.cpp
+        CPPF6-Parameter-Passing-Introduction/main.cpp
+        CPPF6-Parameter-Passing-Starter/main.cpp
+        CPPF7-Array-Basics-Reference/main.cpp
+        CPPF7-Array-Practice/main.cpp
+        CPPF7-Array-Practice-Starter/main.cpp
+        CPPF7-Bank-Accounts/main.cpp
+        CPPF7-Pointer-Arithmetic-Reference/main.cpp
+        CPPF7-Tic-Tac-Toe/main.cpp
+        CPPF8-2D-Array-Practice/main.cpp
+        CPPF8-Bank-Transactions/main.cpp
+        CPPF8-Two-Dimensional-Arrays-Reference/main.cpp
+        CPPF9-Assembly-Line/main.cpp
+        CPPF9-Dynamic-Array-Implementation/DynamicArray.cpp
+        CPPF9-Dynamic-Array-Implementation/DynamicArray.h
+        CPPF9-Dynamic-Array-Implementation/main.cpp
+        CPPF9-Dynamic-Variables-Reference/main.cpp
+        CPPF9-Grocery-List/DynamicArray.cpp
+        CPPF9-Grocery-List/DynamicArray.h
+        CPPF9-Grocery-List/GroceryList.cpp
+        CPPF9-Grocery-List/GroceryList.h
+        CPPF9-Grocery-List/main.cpp)

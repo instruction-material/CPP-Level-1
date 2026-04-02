@@ -13,10 +13,10 @@ class GroceryList {
     GroceryList();
 
     // Adds an item to the array
-    void addItem(Grocery item);
+    void addItem(const Grocery& item);
 
     // Prints the current array
-    void printList();
+    void printList() const;
 
     // Removes an item from the array
     void removeItem(size_t itemNum);

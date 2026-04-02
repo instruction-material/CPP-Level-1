@@ -1,7 +1,7 @@
 #ifndef DYNAMICARRAY_H
 #define DYNAMICARRAY_H
 
-#include <stdio.h>
+#include <cstddef>
 #include <string>
 
 // Grocery item that will be used as the type for the dynamic array
@@ -13,10 +13,10 @@ struct Grocery {
   Grocery() : name(""), price(0) {}
 
   // Overloaded constructor
-  Grocery(std::string newName, double newPrice) : name(newName), price(newPrice) {}
+  Grocery(const std::string& newName, double newPrice) : name(newName), price(newPrice) {}
 };
 
-const size_t DEFAULT_SIZE = 5;
+constexpr size_t DEFAULT_SIZE = 5;
 
 class DynamicArray {
 
@@ -25,24 +25,30 @@ class DynamicArray {
     size_t maxSize; // this is the capacity of our array
     Grocery *myVals; // keeps track of the values in a Grocery array
 
+    void resize(size_t newCapacity);
+
   public:
     // default constructor
-    DynamicArray();   
+    DynamicArray();
+    DynamicArray(const DynamicArray& other);
+    DynamicArray& operator=(const DynamicArray& other);
+    DynamicArray(DynamicArray&& other) noexcept;
+    DynamicArray& operator=(DynamicArray&& other) noexcept;
  
     // the destructor
-    ~DynamicArray();  
+    ~DynamicArray();
 
     // adds a value to the current location in the dynamic array
-    void addVal(Grocery val);
+    void addVal(const Grocery& val);
 
     // print out the current vals in the array
-    void printVals();
+    void printVals() const;
 
     // access and prints out a specific value at an index, given that it's within our current bounds
-    Grocery accessVal(size_t index);
+    Grocery accessVal(size_t index) const;
 
     // Gets the current size of the array
-    size_t getSize();
+    size_t getSize() const;
 };
 
 #endif // DYNAMICARRAY_H

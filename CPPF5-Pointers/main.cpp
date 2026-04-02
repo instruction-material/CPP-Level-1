@@ -34,6 +34,7 @@ int main() {
 
   // What happens when we try to dereference a pointer that is nullptr?
   int *p4 = nullptr;
+  std::cout << "This is p4: " << p4 << std::endl;
   // Dereferencing a nullptr causes an error 
   // std::cout << "This is p4: " << *p4 << std::endl;
 

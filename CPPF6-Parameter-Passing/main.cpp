@@ -4,6 +4,7 @@
 void intVal(int val) {
   // do you expect this to change the val that was passed in?
   val = 20;
+  static_cast<void>(val);
 }
 
 // Problem 2: passing an int by reference
@@ -16,6 +17,7 @@ void intRef(int& val) {
 void intConstRef(const int& val) {
   // this line doesn't compile: why?
   // val = 20;
+  static_cast<void>(val);
 }
 
 // Problem 4: passing two ints by value - what will this return
@@ -56,6 +58,7 @@ int& localReturn() {
 // Problem 8: passing a string by value
 void stringVal(std::string str) {
   str = "!Olleh Dlrow";
+  static_cast<void>(str);
 }
 
 // Problem 9: passing a string by reference
@@ -66,6 +69,7 @@ void stringRef(std::string& str) {
 // Problem 10: passing a string by const reference
 void stringConstRef(const std::string& str) {
   //str = "!Olleh Dlrow";
+  static_cast<void>(str);
 }
 
 int main() {
@@ -76,7 +80,7 @@ int main() {
   intVal(val1);
   std::cout << "Expected: 20;" << " Actual: " << val1 << std::endl;
   
-  // passing an int by refernece
+  // passing an int by reference
   int val2 = 10;
 
   std::cout << "\nTesting passing an int by reference: " << std::endl;
@@ -88,7 +92,7 @@ int main() {
 
   std::cout << "\nTesting passing an int by const reference: " << std::endl;
   intConstRef(val3);
-  std::cout << "Expected: 20;" << " Actual: doesn't compile" << std::endl;
+  std::cout << "Expected: 10;" << " Actual: " << val3 << std::endl;
 
   // Problem 4: passing two ints by value
   // uncomment these lines when you want to test it for yourself
@@ -127,6 +131,6 @@ int main() {
   std::string str3 = "Hello World!";
 
   std::cout << "\nTesting passing a string by const reference: " << std::endl;
-  stringRef(str2);
-  std::cout << "Expected: !Olleh Dlrow;" << " Actual: doesn't compile" << std::endl;
+  stringConstRef(str3);
+  std::cout << "Expected: Hello World!;" << " Actual: " << str3 << std::endl;
 }

@@ -3,10 +3,8 @@
 
 int main() {
   // Basic sample driver code that demonstrates adding a post to a profile
-  Profile myProfile = Profile();
-  Post firstPost;
-  firstPost.hearts = 30;
-  firstPost.caption = "My first post!";
+  Profile myProfile;
+  Post firstPost{"My first post!", 30};
   myProfile.addPost(firstPost);
 
   // print out some stats about the current state of the profile

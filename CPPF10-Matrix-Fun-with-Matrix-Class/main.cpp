@@ -3,7 +3,10 @@
 #include "matrix.h"
 
 int main() {
-	int r1, c1, r2, c2;
+  int r1 = 0;
+  int c1 = 0;
+  int r2 = 0;
+  int c2 = 0;
   std::string response = "";
   while (response != "add" && response != "multiply") {
     std::cout << "After creating your matrices, will you want to add them or multiply them? ";
@@ -15,7 +18,7 @@ int main() {
 	std::cout << "Enter rows and column for second matrix: ";
 	std::cin >> r2 >> c2;
 
-  while (response == "add" && r1 != r2 && c1 != c2) {
+  while (response == "add" && (r1 != r2 || c1 != c2)) {
     std::cout << "Error! To add two matrices, they must have the same dimensions." << std::endl;
     std::cout << "Enter rows and column for first matrix: ";
     std::cin >> r1 >> c1;
@@ -31,18 +34,18 @@ int main() {
     std::cin >> r2 >> c2;
   }
 
-  Matrix mat1 = Matrix(r1, c1);
-  Matrix mat2 = Matrix(r2, c2);
+  Matrix mat1(r1, c1);
+  Matrix mat2(r2, c2);
   mat1.fillMatrix();
   mat2.fillMatrix();
   mat1.display();
   mat2.display();
 
   if (response == "add") {
-    Matrix additionResult = mat1.add(mat2);
+    const Matrix additionResult = mat1.add(mat2);
     additionResult.display();
   } else {
-    Matrix multiplicationResult = mat1.multiply(mat2);
+    const Matrix multiplicationResult = mat1.multiply(mat2);
     multiplicationResult.display();
   }
   

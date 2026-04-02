@@ -2,31 +2,85 @@
 #include <iostream>
 
 // our default constructor
-Profile::Profile() : mySize(0), myPosts(new Post[DEFAULT_SIZE]), maxSize(DEFAULT_SIZE) {}
+Profile::Profile() : mySize(0), maxSize(DEFAULT_SIZE), myPosts(new Post[DEFAULT_SIZE]) {}
+
+Profile::Profile(const Profile& other)
+    : mySize(other.mySize), maxSize(other.maxSize), myPosts(new Post[other.maxSize]) {
+  for (size_t i = 0; i < mySize; ++i) {
+    myPosts[i] = other.myPosts[i];
+  }
+}
+
+Profile& Profile::operator=(const Profile& other) {
+  if (this == &other) {
+    return *this;
+  }
+
+  Post* newPosts = new Post[other.maxSize];
+  for (size_t i = 0; i < other.mySize; ++i) {
+    newPosts[i] = other.myPosts[i];
+  }
+
+  delete[] myPosts;
+  myPosts = newPosts;
+  mySize = other.mySize;
+  maxSize = other.maxSize;
+  return *this;
+}
+
+Profile::Profile(Profile&& other) noexcept
+    : mySize(other.mySize), maxSize(other.maxSize), myPosts(other.myPosts) {
+  other.mySize = 0;
+  other.maxSize = 0;
+  other.myPosts = nullptr;
+}
+
+Profile& Profile::operator=(Profile&& other) noexcept {
+  if (this == &other) {
+    return *this;
+  }
+
+  delete[] myPosts;
+  myPosts = other.myPosts;
+  mySize = other.mySize;
+  maxSize = other.maxSize;
+
+  other.mySize = 0;
+  other.maxSize = 0;
+  other.myPosts = nullptr;
+  return *this;
+}
+
+Profile::~Profile() {
+  delete[] myPosts;
+}
+
+void Profile::resize(size_t newCapacity) {
+  Post* newPosts = new Post[newCapacity];
+  for (size_t i = 0; i < mySize; ++i) {
+    newPosts[i] = myPosts[i];
+  }
+
+  delete[] myPosts;
+  myPosts = newPosts;
+  maxSize = newCapacity;
+}
 
 // adds a post to the next available spot in the array
-void Profile::addPost(Post newPost) {
+void Profile::addPost(const Post& newPost) {
   // doubles in size, dynamically, if we're out of space. creates a new array and swaps the values
   if (mySize == maxSize) {
-    Post* temp = new Post[maxSize * 2];
-    // loads in the new vals
-    for (size_t i = 0; i < maxSize; ++i) {
-      temp[i] = myPosts[i];
-    }
-    // swap changes the pointers from temp to myVals
-    std::swap(myPosts, temp); 
-    maxSize *= 2;
-    delete[] temp;
+    resize(maxSize * 2);
   }
   myPosts[mySize] = newPost;
-  mySize++;
+  ++mySize;
 }
 
 // prints a specific post given an index
-void Profile::printPost(size_t postIndex) {
+void Profile::printPost(size_t postIndex) const {
   if (validPostIndex(postIndex)) {
     // create a temp just for prettier printing and another demonstration of pointers; the print statements could be achieved with myPosts[i].field
-    Post* temp = &myPosts[postIndex]; 
+    const Post* temp = &myPosts[postIndex];
     std::cout << "Post number: " << postIndex + 1 << std::endl;
     std::cout << "Post caption: " << temp->caption << std::endl;
     std::cout << "Post hearts: " << temp->hearts << std::endl;
@@ -38,7 +92,7 @@ void Profile::printPost(size_t postIndex) {
 
 
 // print out all the values that we are holding on to right now
-void Profile::printPosts() {
+void Profile::printPosts() const {
   std::cout << "Now printing out the current profile: " << std::endl;
   for (size_t i = 0; i < mySize; ++i) {
     // use our helper function to print out posts rather than iterating through it again
@@ -48,7 +102,7 @@ void Profile::printPosts() {
 }
 
 // bonus: add a statistic calculator
-int Profile::sumHearts() {
+int Profile::sumHearts() const {
   int total = 0;
   for (size_t i = 0; i < mySize; ++i) {
     total += myPosts[i].hearts;
@@ -81,26 +135,11 @@ void Profile::fillProfile() {
 // removes a post at a certain index
 void Profile::removePost(size_t index) {
   if (validPostIndex(index)) {
-
-    // make a copy of the old array
-    Post* temp = new Post[maxSize];
-    size_t j = 0;
-    for (size_t i = 0; i < maxSize; ++i) {
-      // once we get to that index, skip it
-      if (i == index) {
-        continue;
-      }
-      temp[j++] = myPosts[i];
+    for (size_t i = index + 1; i < mySize; ++i) {
+      myPosts[i - 1] = myPosts[i];
     }
-    
-    // reassign our posts array to the new version
-    std::swap(temp, myPosts);
-
-    // clean up by deleting the old array
-    delete[] temp;
-
-    // make sure we change our size and we're ready to go
-    mySize--;
+    --mySize;
+    myPosts[mySize] = Post{};
 
   } else {
     std::cout << "Error! This would have attempted to remove a post that doesn't exist in the array." << std::endl;
@@ -117,6 +156,6 @@ void Profile::addHearts(size_t postIndex, int numHearts) {
 }
 
 // helper function that checks to see if a post index is correct or not
-bool Profile::validPostIndex(size_t index) {
+bool Profile::validPostIndex(size_t index) const {
   return index < mySize;
 }

@@ -1,7 +1,7 @@
 #ifndef MATRIX_H
 #define MATRIX_H
 
-#include <string>
+#include <vector>
 
 class Matrix {
 
@@ -10,30 +10,26 @@ class Matrix {
 
     int numCols;
 
-    int** mat;
+    std::vector<std::vector<int>> mat;
 
     int matNum;
     
   public:
     Matrix(int r, int c);
 
-    Matrix(int r, int c, int** matrix);
+    int getNumRows() const;
 
-    ~Matrix();
+    int getNumCols() const;
 
-    int getNumRows();
-
-    int getNumCols();
-
-    int get(int r, int c);
+    int get(int r, int c) const;
 
     void fillMatrix();
 
-    Matrix add(Matrix other);
+    Matrix add(const Matrix& other) const;
 
-    Matrix multiply(Matrix other);
+    Matrix multiply(const Matrix& other) const;
 
-    void display();
+    void display() const;
 
 };
 

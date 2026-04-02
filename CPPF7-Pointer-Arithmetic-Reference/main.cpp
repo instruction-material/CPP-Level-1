@@ -1,11 +1,11 @@
 #include <iostream>
 
 int main() {
-  int mySize = 20;
+  constexpr int mySize = 20;
   int arr1[mySize];
 
   // load values into arr1
-  for (int i = 0 ; i < mySize; i++) {
+  for (int i = 0; i < mySize; ++i) {
     arr1[i] = i;
   }
 

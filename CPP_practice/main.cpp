@@ -1,6 +1,6 @@
 #include <iostream>
-#include <string>
 #include <map>
+#include <string>
 
 // Write a C++ function that takes in a string and determines if it is a palindrome. Please do not generate additional strings in your algorithm. Please do not reference past work!
 
@@ -16,65 +16,66 @@
 // Column 6 = How much money changed [negative for withdrawl, positive for deposit]
 // Column 7 = Ending balance
 
-bool isPalindromeButOptimized(std::string str) {
-  int pos1 = 0;
-  int pos2 = str.size() - 1;
+bool isPalindromeButOptimized(const std::string& str) {
+  if (str.empty()) {
+    return true;
+  }
 
-  while(pos1 < str.size() / 2 && pos1 != pos2) {
-    if(str[pos1] != str[pos2]) {
+  std::string::size_type pos1 = 0;
+  std::string::size_type pos2 = str.size() - 1;
+
+  while (pos1 < str.size() / 2 && pos1 != pos2) {
+    if (str[pos1] != str[pos2]) {
       return false;
     }
-    pos1++;
-    pos2--;
+    ++pos1;
+    --pos2;
   }
 
   return true;
 }
 
-void newtransactioninput(int* month, int* day, int* year, int* modifier, int money, int* before_balance, int* after_balance) {
+void newTransactionInput(int& month, int& day, int& year, int& modifier, int money,
+                         int& beforeBalance, int& afterBalance) {
   std::cout << "What day is it? ";
-  std::cin >> *day;
+  std::cin >> day;
 
   std::cout << "What month is it? (month number) ";
-  std::cin >> *month;
+  std::cin >> month;
 
   std::cout << "What year is it? ";
-  std::cin >> *year;
+  std::cin >> year;
 
   std::cout << "How much money are you withdrawing/depositting? (negative number for withdraw, positive for deposit) ";
-  std::cin >> *modifier;
+  std::cin >> modifier;
 
-  *before_balance = money;
-  *after_balance = money + *modifier;
-
+  beforeBalance = money;
+  afterBalance = money + modifier;
 }
 
-void printTransactions(int* arr, int row) {
-  std::cout << "Transaction number: " << *(arr + row * 5 + 0) << std::endl;
-  std::cout << "Date: " << *(arr + row * 5 + 1) << "/" << *(arr + row * 5 + 2) << "/" << *(arr + row * 5 + 3) << std::endl;
-  std::cout << "Balance before: " << *(arr + row * 5 + 4) << std::endl;
-  std::cout << "Money desposited/withdrawn: " << *(arr + row * 5 + 5) << std::endl;
-  std::cout << "Balance after: " << *(arr + row * 5 + 6) << std::endl;
+void printTransaction(const int* transactionRow) {
+  std::cout << "Transaction number: " << transactionRow[0] << std::endl;
+  std::cout << "Date: " << transactionRow[1] << "/" << transactionRow[2] << "/" << transactionRow[3] << std::endl;
+  std::cout << "Balance before: " << transactionRow[4] << std::endl;
+  std::cout << "Money desposited/withdrawn: " << transactionRow[5] << std::endl;
+  std::cout << "Balance after: " << transactionRow[6] << std::endl;
 }
 
-void lettermap(std::string str) {
+void letterMap(const std::string& str) {
   std::map<char, int> frequency;
-  int i = 0;
-
-  while(i < str.size()) {
-    frequency[str[i]]++;
-    i++;
+  for (const char letter : str) {
+    ++frequency[letter];
   }
 
-  for(auto entry : frequency) {
+  for (const auto& entry : frequency) {
     std::cout << "Letter: " << entry.first << "\nFrequency: " << entry.second << "\n\n";
   }
 }
 
 int main() {
-  std::string str = "inanimate insanity invitational";
-  //lettermap(str);
-
+  const std::string str = "inanimate insanity invitational";
+  // std::cout << std::boolalpha << isPalindromeButOptimized(str) << std::endl;
+  // letterMap(str);
 
   int transactions[2][7];
   int money = 2763;
@@ -88,9 +89,9 @@ int main() {
 
   std::cout << "Balance: " << money << std::endl;
 
-  while(i < 2) {
-    newtransactioninput(&month, &day, &year, &modifier, money, &before_balance, &after_balance);
-    transactions[i][0] = i+1;
+  while (i < 2) {
+    newTransactionInput(month, day, year, modifier, money, before_balance, after_balance);
+    transactions[i][0] = i + 1;
     transactions[i][1] = month;
     transactions[i][2] = day;
     transactions[i][3] = year;
@@ -98,8 +99,11 @@ int main() {
     transactions[i][5] = modifier;
     transactions[i][6] = after_balance;
     std::cout << "\n";
-    i++;
+    money = after_balance;
+    ++i;
   }
-  printTransactions(&transactions[0][0], 0);
+
+  printTransaction(transactions[0]);
   std::cout << "\n";
-  printTransactions(&transactions[0][0], 1);}
+  printTransaction(transactions[1]);
+}

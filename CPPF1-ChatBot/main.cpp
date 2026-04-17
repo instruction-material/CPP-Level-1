@@ -33,8 +33,8 @@ int main() {
   std::cin >> dollars;
 
   // Multiply our original funds to determine the amount of yen it translates to 
-  double conversionRate = 109.01;
-  double yen = dollars * conversionRate;
+  constexpr double conversionRate = 109.01;
+  const double yen = dollars * conversionRate;
 
   std::cout << "If you had " << dollars << " in dollars, you would have " << yen << " in yen!" << std::endl;
 }

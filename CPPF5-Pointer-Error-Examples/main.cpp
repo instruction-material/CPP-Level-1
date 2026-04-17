@@ -5,7 +5,7 @@ int main() {
   std::cout << "\n";
   
   // ----- dangling pointer -----
-  int* val1 = new int;
+  const auto val1 = new int;
   int* p1 = val1;
   *val1 = 10;
   delete p1;
@@ -20,7 +20,7 @@ int main() {
   *p1 = 20;
 
   // ----- improper initialization -----
-  // this line will initialize p1 to be int*, and p2 to be a int
+  // this line will initialize p1 to be int*, and p2 to be an int
   // int* p1, p2;
 
   // ----- attempting to use uninitialized pointers -----

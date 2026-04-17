@@ -3,14 +3,14 @@
 
 // Definition of a student struct
 struct Student {
-  int rollNumber;
+  int rollNumber{};
   std::string name;
-  int phoneNumber;
+  int phoneNumber{};
 };
 
 int main() {
   // Create a Student with directly initialized fields
-  Student p1 = {1,"Brown",123443};
+  const Student p1 = {1,"Brown",123443};
 
   // Create Students, then set their fields
   Student p2, p3; 

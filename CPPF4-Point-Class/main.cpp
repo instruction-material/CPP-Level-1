@@ -3,11 +3,11 @@
 
 int main() {
   // Using the default constructor
-  Point p1 = Point();
+  auto p1 = Point();
   std::cout << p1.toString() << std::endl;
 
   // Using the overloaded constructor
-  Point p2 = Point(-1, 1);
+  auto p2 = Point(-1, 1);
   std::cout << p2.toString() << std::endl;
 
   // This line doesn't work. Why?

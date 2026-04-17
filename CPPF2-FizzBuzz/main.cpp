@@ -2,7 +2,8 @@
 
 int main() {
   std::cout << "\n";
-  for (int i = 1; i <= 50; i++) {
+  /*
+   *for (int i = 1; i <= 50; i++) {
     if (i % 3 == 0 && i % 5 == 0) {
       std::cout << "FizzBuzz!" << std::endl;
     } else if (i % 3 == 0) {
@@ -12,6 +13,14 @@ int main() {
     } else {
       std::cout << i << std::endl;
     }
+  }*/
+
+  for (int i = 1; i <= 50; i++) {
+    std::cout <<  ((!(i % 15)) ?   "FizzBuzz!" :
+                  (!(i % 3))  ?   "Fizz!"     :
+                  (!(i % 5))  ?   "Buzz!"     :
+                  reinterpret_cast<char*>(i))
+        << std::endl;
   }
   
   /*

@@ -3,7 +3,7 @@
 
 int main() {
   // creates a new pointer p1
-  int *p1 = new int;
+  auto p1 = new int;
 
   // sets p1 to point to an anonymous variable with whatever integer value comes in from the console
   std::cout << "Please enter an integer: " << std::endl;
@@ -26,7 +26,7 @@ int main() {
   std::cout << "\n\n–––––– String pointer lifecycle ––––––" << std::endl;
 
   // Create a new string ptr
-  std::string* strPtr = new std::string;
+  auto strPtr = new std::string;
 
   // Assign the value that the strptr points to
   *strPtr = "Dynamic input";

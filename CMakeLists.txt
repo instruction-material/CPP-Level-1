@@ -3,77 +3,77 @@ project(CPP_Level_1)
 
 set(CMAKE_CXX_STANDARD 14)
 
-include_directories(CPP-66-cppf10-matrix-fun-with-matrix-class)
-include_directories(CPP-67-cppf11-profile-posts)
-include_directories(CPP-38-cppf4-cat-class)
-include_directories(CPP-39-cppf4-person-class)
-include_directories(CPP-40-cppf4-person-class-with-bmi)
-include_directories(CPP-41-cppf4-point-class)
-include_directories(CPP-62-cppf9-dynamic-array-implementation)
-include_directories(CPP-64-cppf9-grocery-list)
+include_directories(CPPF10-Matrix-Fun-with-Matrix-Class)
+include_directories(CPPF11-Profile-Posts)
+include_directories(CPPF4-Cat-Class)
+include_directories(CPPF4-Person-Class)
+include_directories(CPPF4-Person-Class-with-BMI)
+include_directories(CPPF4-Point-Class)
+include_directories(CPPF9-Dynamic-Array-Implementation)
+include_directories(CPPF9-Grocery-List)
 
 add_executable(CPP_Level_1
-#        CPP-23-cpp-practice/main.cpp
-#        CPP-24-cpp-structs-example/main.cpp
-#        CPP-25-cppf1-chat-bot/main.cpp
-#        CPP-26-cppf1-input-and-output-reference/main.cpp
-#        CPP-27-cppf1-mad-libs/main.cpp
-#        CPP-28-cppf1-primitive-types-and-strings-reference/main.cpp
-#        CPP-29-cppf2-fizz-buzz/main.cpp
-#        CPP-30-cppf2-for-loop-practice/main.cpp
-#        CPP-31-cppf2-number-games/main.cpp
-#        CPP-32-cppf2-rock-paper-scissors/main.cpp
-#        CPP-33-cppf2-while-loop-practice/main.cpp
-#        CPP-34-cppf3-function-practice/main.cpp
-#        CPP-35-cppf3-number-guesser/main.cpp
-#        CPP-36-cppf3-probability-functions/main.cpp
-#        CPP-37-cppf3-rand-reference/main.cpp
-#        CPP-38-cppf4-cat-class/cat.cpp
-#        CPP-38-cppf4-cat-class/cat.h
-#        CPP-38-cppf4-cat-class/main.cpp
-#        CPP-39-cppf4-person-class/main.cpp
-#        CPP-39-cppf4-person-class/person.cpp
-#        CPP-39-cppf4-person-class/person.h
-#        CPP-40-cppf4-person-class-with-bmi/main.cpp
-#        CPP-40-cppf4-person-class-with-bmi/person.cpp
-#        CPP-40-cppf4-person-class-with-bmi/person.h
-#        CPP-41-cppf4-point-class/main.cpp
-#        CPP-41-cppf4-point-class/point.cpp
-#        CPP-41-cppf4-point-class/point.h
-#        CPP-42-cppf5-pointer-error-examples/main.cpp
-#        CPP-43-cppf5-pointer-practice/main.cpp
-#        CPP-44-cppf5-pointers/main.cpp
-#        CPP-45-cppf5-pointers-starter/main.cpp
-#        CPP-46-cppf5-project-2-assembly-line/main.cpp
-#        CPP-47-cppf6-chaos-monkeys/main.cpp
-#        CPP-48-cppf6-defanging-a-website-url/main.cpp
-#        CPP-49-cppf6-parameter-passing/main.cpp
-#        CPP-50-cppf6-parameter-passing-introduction/main.cpp
-#        CPP-51-cppf6-parameter-passing-starter/main.cpp
-#        CPP-52-cppf7-array-basics-reference/main.cpp
-        CPP-53-cppf7-array-practice/main.cpp
-#        CPP-54-cppf7-array-practice-starter/main.cpp
-#        CPP-55-cppf7-bank-accounts/main.cpp
-#        CPP-56-cppf7-pointer-arithmetic-reference/main.cpp
-#        CPP-57-cppf7-tic-tac-toe/main.cpp
-#        CPP-58-cppf8-2d-array-practice/main.cpp
-#        CPP-59-cppf8-bank-transactions/main.cpp
-#        CPP-60-cppf8-two-dimensional-arrays-reference/main.cpp
-#        CPP-61-cppf9-assembly-line/main.cpp
-#        CPP-62-cppf9-dynamic-array-implementation/DynamicArray.cpp
-#        CPP-62-cppf9-dynamic-array-implementation/DynamicArray.h
-#        CPP-62-cppf9-dynamic-array-implementation/main.cpp
-#        CPP-63-cppf9-dynamic-variables-reference/main.cpp
-#        CPP-64-cppf9-grocery-list/DynamicArray.cpp
-#        CPP-64-cppf9-grocery-list/DynamicArray.h
-#        CPP-64-cppf9-grocery-list/GroceryList.cpp
-#        CPP-64-cppf9-grocery-list/GroceryList.h
-#        CPP-64-cppf9-grocery-list/main.cpp
-#        CPP-65-cppf10-matrix-addition/main.cpp
-#        CPP-66-cppf10-matrix-fun-with-matrix-class/main.cpp
-#        CPP-66-cppf10-matrix-fun-with-matrix-class/matrix.cpp
-#        CPP-66-cppf10-matrix-fun-with-matrix-class/matrix.h
-#        CPP-67-cppf11-profile-posts/main.cpp
-#        CPP-67-cppf11-profile-posts/profile.cpp
-#        CPP-67-cppf11-profile-posts/profile.h
+#        CPP-Practice/main.cpp
+#        CPP-Structs-Example/main.cpp
+#        CPPF5-Pointers-Starter/main.cpp
+#        CPPF1-Chat-Bot/main.cpp
+#        CPPF1-Input-and-Output-Reference/main.cpp
+#        CPPF1-Mad-Libs/main.cpp
+#        CPPF1-Primitive-Types-and-Strings-Reference/main.cpp
+#        CPPF10-Matrix-Addition/main.cpp
+#        CPPF10-Matrix-Fun-with-Matrix-Class/main.cpp
+#        CPPF10-Matrix-Fun-with-Matrix-Class/matrix.cpp
+#        CPPF10-Matrix-Fun-with-Matrix-Class/matrix.h
+#        CPPF11-Profile-Posts/main.cpp
+#        CPPF11-Profile-Posts/profile.cpp
+#        CPPF11-Profile-Posts/profile.h
+#        CPPF2-Fizz-Buzz/main.cpp
+#        CPPF2-For-Loop-Practice/main.cpp
+#        CPPF2-Number-Games/main.cpp
+#        CPPF2-Rock-Paper-Scissors/main.cpp
+#        CPPF2-While-Loop-Practice/main.cpp
+#        CPPF3-Function-Practice/main.cpp
+#        CPPF3-Number-Guesser/main.cpp
+#        CPPF3-Probability-Functions/main.cpp
+#        CPPF3-rand-Reference/main.cpp
+#        CPPF4-Cat-Class/cat.cpp
+#        CPPF4-Cat-Class/cat.h
+#        CPPF4-Cat-Class/main.cpp
+#        CPPF4-Person-Class/main.cpp
+#        CPPF4-Person-Class/person.cpp
+#        CPPF4-Person-Class/person.h
+#        CPPF4-Person-Class-with-BMI/main.cpp
+#        CPPF4-Person-Class-with-BMI/person.cpp
+#        CPPF4-Person-Class-with-BMI/person.h
+#        CPPF4-Point-Class/main.cpp
+#        CPPF4-Point-Class/point.cpp
+#        CPPF4-Point-Class/point.h
+#        CPPF5-Pointer-Error-Examples/main.cpp
+#        CPPF5-Pointer-Practice/main.cpp
+#        CPPF5-Pointers/main.cpp
+#        CPPF5-Project-2-Assembly-Line/main.cpp
+#        CPPF6-Chaos-Monkeys/main.cpp
+#        CPPF6-Defanging-a-Website-URL/main.cpp
+#        CPPF6-Parameter-Passing/main.cpp
+#        CPPF6-Parameter-Passing-Introduction/main.cpp
+#        CPPF6-Parameter-Passing-Starter/main.cpp
+#        CPPF7-Array-Basics-Reference/main.cpp
+        CPPF7-Array-Practice/main.cpp
+#        CPPF7-Array-Practice-Starter/main.cpp
+#        CPPF7-Bank-Accounts/main.cpp
+#        CPPF7-Pointer-Arithmetic-Reference/main.cpp
+#        CPPF7-Tic-Tac-Toe/main.cpp
+#        CPPF8-2D-Array-Practice/main.cpp
+#        CPPF8-Bank-Transactions/main.cpp
+#        CPPF8-Two-Dimensional-Arrays-Reference/main.cpp
+#        CPPF9-Assembly-Line/main.cpp
+#        CPPF9-Dynamic-Array-Implementation/DynamicArray.cpp
+#        CPPF9-Dynamic-Array-Implementation/DynamicArray.h
+#        CPPF9-Dynamic-Array-Implementation/main.cpp
+#        CPPF9-Dynamic-Variables-Reference/main.cpp
+#        CPPF9-Grocery-List/DynamicArray.cpp
+#        CPPF9-Grocery-List/DynamicArray.h
+#        CPPF9-Grocery-List/GroceryList.cpp
+#        CPPF9-Grocery-List/GroceryList.h
+#        CPPF9-Grocery-List/main.cpp
 )

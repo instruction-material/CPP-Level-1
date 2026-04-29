@@ -9,8 +9,8 @@ Core flow:
 - `CPPF4` classes and objects
 - `CPPF5` vectors and collection patterns
 - `CPPF6` structs and parameter passing
-- `CPPF7` grids and 2D vectors
-- `CPPF8` profile-posts capstone with `std::vector`
+- `CPPF7` grids, 2D vectors, and grid statistics
+- `CPPF8` profile-posts capstone with `std::vector` and a state-machine extension
 
 Scope notes:
 - This repo keeps the safer, earlier part of the sequence centered on functions, classes, structs, and standard-library containers.

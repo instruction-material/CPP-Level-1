@@ -44,3 +44,11 @@ add_executable(CPP_Level_1
 #        CPPF8-Profile-Posts/main.cpp
 #        CPPF8-Profile-Posts/profile.cpp
 )
+
+add_executable(CPPF7_Grid_Statistics
+        CPPF7-Grid-Statistics/main.cpp
+)
+
+add_executable(CPPF8_State_Machine_Profile_Posts
+        CPPF8-State-Machine-Profile-Posts/main.cpp
+)

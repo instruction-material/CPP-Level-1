@@ -1,19 +1,7 @@
 # Source Backlog Ledger
 
-This ledger records top-level source folders that are present in the repository but are not active catalog starter or solution targets. A folder listed here is intentionally not an unresolved audit failure.
+Current status: no unlinked source folders remain at the active top level.
 
-Promotion rule: move a folder out of this ledger only after the course text names where it belongs, whether it is starter or solution material, and how the student or tutor verifies it.
+On 2026-05-14, 11 top-level folders that were not linked by the live course catalog were moved to `_archived-unlinked/`. That archive is retained for source-history review, optional-bank recovery, or future promotion, but it is not part of the active public course surface.
 
-| Folder | Classification | Action |
-| --- | --- | --- |
-| `CPPF1-Input-and-Output-Reference` | support-or-variant-source | Support, template, starter, solution, or updated variant. Keep available but do not count as a separate active project unless promoted. |
-| `CPPF1-Variables-Types-and-Input-and-Output-Supplemental-3` | inactive-source-candidate | Inactive/promotable source. Do not link until the course text, starter/solution role, and verification expectation are added. |
-| `CPPF2-Loops-and-Conditionals-Supplemental-2` | inactive-source-candidate | Inactive/promotable source. Do not link until the course text, starter/solution role, and verification expectation are added. |
-| `CPPF2-Loops-and-Conditionals-Supplemental-3` | inactive-source-candidate | Inactive/promotable source. Do not link until the course text, starter/solution role, and verification expectation are added. |
-| `CPPF3-Function-Practice` | inactive-source-candidate | Inactive/promotable source. Do not link until the course text, starter/solution role, and verification expectation are added. |
-| `CPPF3-Functions-Supplemental-3` | inactive-source-candidate | Inactive/promotable source. Do not link until the course text, starter/solution role, and verification expectation are added. |
-| `CPPF4-Classes-and-Objects-Supplemental-2` | inactive-source-candidate | Inactive/promotable source. Do not link until the course text, starter/solution role, and verification expectation are added. |
-| `CPPF4-Classes-and-Objects-Supplemental-3` | inactive-source-candidate | Inactive/promotable source. Do not link until the course text, starter/solution role, and verification expectation are added. |
-| `CPPF4-Person-Class` | inactive-source-candidate | Inactive/promotable source. Do not link until the course text, starter/solution role, and verification expectation are added. |
-| `CPPF6-References-and-Parameter-Passing-Supplemental-2` | support-or-variant-source | Support, template, starter, solution, or updated variant. Keep available but do not count as a separate active project unless promoted. |
-| `CPPF6-References-and-Parameter-Passing-Supplemental-3` | support-or-variant-source | Support, template, starter, solution, or updated variant. Keep available but do not count as a separate active project unless promoted. |
+Promotion rule: restore a folder from `_archived-unlinked/` only after the live course text names where it belongs, whether it is starter or solution material, and how the student or tutor verifies it. Update `COURSE_SOURCE_MANIFEST.md` and the live catalog link in the same change.

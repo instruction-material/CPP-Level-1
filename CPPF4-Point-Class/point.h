@@ -5,12 +5,12 @@
 #include <string>
 
 class Point {
-  // declaration of our private variables and functions
+    // declaration of our private variables and functions
   private:
     int x;
     int y;
-  
-  // declaration of our public variables and functions
+
+    // declaration of our public variables and functions
   public:
     // our default constructor
     Point();
@@ -19,7 +19,7 @@ class Point {
     Point(int xVal, int yVal);
 
     // this can be our toString function that prints out the x and y location of our point.
-    std::string toString(); 
+    std::string toString();
 
     // getter for our x value
     int getX();

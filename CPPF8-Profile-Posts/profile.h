@@ -6,8 +6,8 @@
 #include <vector>
 
 struct Post {
-  std::string caption;
-  int hearts;
+    std::string caption;
+    int hearts;
 };
 
 class Profile {

@@ -1,8 +1,8 @@
 #include <iostream>
 
 int main() {
-  std::cout << "\n";
-  /*
+    std::cout << "\n";
+    /*
    *for (int i = 1; i <= 50; i++) {
     if (i % 3 == 0 && i % 5 == 0) {
       std::cout << "FizzBuzz!" << std::endl;
@@ -15,15 +15,15 @@ int main() {
     }
   }*/
 
-  for (int i = 1; i <= 50; i++) {
-    std::cout <<  ((!(i % 15)) ?   "FizzBuzz!" :
-                  (!(i % 3))  ?   "Fizz!"     :
-                  (!(i % 5))  ?   "Buzz!"     :
-                  reinterpret_cast<char*>(i))
-        << std::endl;
-  }
-  
-  /*
+    for (int i = 1; i <= 50; i++) {
+        std::cout << ((!(i % 15))  ? "FizzBuzz!"
+                      : (!(i % 3)) ? "Fizz!"
+                      : (!(i % 5)) ? "Buzz!"
+                                   : reinterpret_cast<char*>(i))
+                  << std::endl;
+    }
+
+    /*
   // One possible approach to solving the bonus problem
   int num1, num2;
   std::cout << "Enter a number: ";
@@ -32,7 +32,7 @@ int main() {
   std::cin >> num2;
 
   for (int i = 1; i <= 50; i++) {
-    if (i % num1 == 0 && i % num2 == 0) {           
+    if (i % num1 == 0 && i % num2 == 0) {
       std::cout << "FizzBuzz!" << std::endl;
     } else if (i % num1 == 0) {
       std::cout << "Fizz!" << std::endl;
@@ -44,5 +44,5 @@ int main() {
   }
   */
 
-  return 0;
+    return 0;
 }

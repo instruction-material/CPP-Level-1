@@ -11,13 +11,14 @@ class Person {
     int height; // given in inches
     std::string birthday;
     std::string location;
-    
-    std::string stringHeight(); 
-  
+
+    std::string stringHeight();
+
   public:
     Person();
 
-    Person(int age, std::string name, int height, std::string birthday, std::string location);
+    Person(int age, std::string name, int height, std::string birthday,
+           std::string location);
 
     std::string toString();
 };

@@ -11,7 +11,7 @@ class Cat {
     int myAge;
     std::string myColor;
 
-  public: 
+  public:
     // default constructor
     Cat();
 

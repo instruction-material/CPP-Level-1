@@ -55,7 +55,7 @@ class FoundationContracts(unittest.TestCase):
         cls.binaries = {}
         cls.sanitized = {}
         folders = re.findall(r"^\| `([^`]+)` \|$", (ROOT / "COURSE_SOURCE_MANIFEST.md").read_text(), re.M)
-        assert len(folders) == 29 and len(set(folders)) == 29
+        assert len(folders) == 30 and len(set(folders)) == 30
         compiler = os.environ.get("CXX", "c++")
         for folder in folders:
             for part in ["", "starter", "solution"]:
@@ -68,14 +68,16 @@ class FoundationContracts(unittest.TestCase):
                 flags = ["-std=c++20", "-Wall", "-Wextra", "-Wpedantic"]
                 if folder in REVIEWED or folder in [
                         "CPPF3-Function-Practice", "CPPF3-Probability-Functions",
-                        "CPPF3-Number-Guesser", "CPPF3-rand-Reference"]:
+                        "CPPF3-Number-Guesser", "CPPF3-rand-Reference",
+                        "CPPF4-Person-Class", "CPPF4-Cat-Class",
+                        "CPPF4-Person-Class-with-BMI", "CPPF4-Point-Class"]:
                     flags.append("-Werror")
                 code, out, err = execute([compiler, *flags, "-I", str(directory),
                                          *map(str, sources), "-o", str(output)])
                 assert code == 0, f"{key}: {out}{err}"
                 cls.binaries[key] = output
-        assert len(cls.binaries) == 45, len(cls.binaries)
-        print("Compiled all 45 active native targets; the eight reviewed packs and random reference are warning-clean.", flush=True)
+        assert len(cls.binaries) == 50, len(cls.binaries)
+        print("Compiled all 50 active native targets; the ten reviewed packs and class/random lesson references are warning-clean.", flush=True)
         if os.environ.get("SOURCE_SANITIZERS", "1") == "1":
             for folder in REVIEWED:
                 source = ROOT / folder / "solution/main.cpp"

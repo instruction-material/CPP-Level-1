@@ -1,12 +1,20 @@
 #include "person.h"
 
-// Members initialize in declaration order, regardless of list order.
-Person::Person()
-    : mAge(0), mName("Unknown"), mHeight(0), mBirthday("January 1, 1970"),
-      mBirthLocation("Somewhere over the rainbow") {}
+Person::Person() {
+    mAge = 0;
+    mName = "Unknown";
+    mHeight = 0;
+    mBirthday = "January 1, 1970";
+    mBirthLocation = "Somewhere over the rainbow";
+}
 
-Person::Person(int age, std::string name, int height, std::string birthday, std::string location)
-    : mAge(age), mName(name), mHeight(height), mBirthday(birthday), mBirthLocation(location) {}
+Person::Person(int age, std::string name, int height, std::string birthday, std::string location) {
+    mAge = age;
+    mName = name;
+    mHeight = height;
+    mBirthday = birthday;
+    mBirthLocation = location;
+}
 
 std::string Person::getName() { return mName; }
 void Person::setName(std::string name) { mName = name; }

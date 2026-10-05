@@ -15,7 +15,7 @@ Core flow:
 Scope notes:
 - This repo keeps the safer, earlier part of the sequence centered on functions, classes, structs, and standard-library containers.
 - The raw-memory track that used to live here now lives in `instruction-material/CPP-Level-2`.
-- Older reinforcement folders such as loop drills, randomness reference work, and BMI/class extensions remain here when they still support the foundations path.
+- Older reinforcement folders such as loop drills, randomness reference work, and member-initializer/class references remain here when they still support the foundations path.
 
 Cleanup rules applied here:
 - generated binaries such as `main`
@@ -25,17 +25,22 @@ Cleanup rules applied here:
 
 ## Reviewed foundation projects
 
-The first three modules' eight projects have self-contained briefs and separate
+The first four modules' ten projects have self-contained briefs and separate
 incomplete starter/reference folders. Start in `starter`, complete its TODOs,
 then compare with `solution`. The root `main.cpp` forwards to the corrected
 reference for compatibility with old direct build links. Do not import the
 mixed project root as a starter.
 
-Run `bash verify-course-source.sh` with Python 3 and C++20. It compiles all 45
-active native targets and checks the eight reviewed projects' console behavior and
+Run `bash verify-course-source.sh` with Python 3 and C++20. It compiles all 50
+active native targets and checks the ten reviewed projects' console behavior and
 starter boundaries. Hosted CI also checks every separate CMake target. Other
 course folders have compilation coverage but await assignment-specific behavior
 and role review; see `SOURCE_PACK_REVIEW.md`.
 
 The site C++ IDE imports, edits, saves and exports files; run the downloaded
 programs with the native compiler commands in each brief.
+
+The classes module restores the required Person project before the
+member-initializer lesson and Cat project. Complete Point/initializer examples
+are references, not learner starter packs. Person and Cat headers/source files
+are imported together; compile both `.cpp` files as described in each brief.

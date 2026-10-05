@@ -9,7 +9,17 @@ Promotion rule: restore a folder from `_archived-unlinked/` only after the live 
 On 2026-10-05, the generic CPPF1 variable/vector transformation wrapper was
 moved byte-for-byte into the inactive archive. Its vector/loop transformation
 was outside the variables/input stage and did not provide a distinct project
-contract. The archive now has 12 source folders and the active catalog has 29.
+contract. At that stage the archive had 12 source folders and the active catalog had 29.
 Required original Mad Libs, Chat Bot and all three CPPF2 projects remain active;
 no original core project was retired. Source files in the moved folder are
 preserved for historical review.
+
+The later CPPF3 generic vector/reference wrapper was also archived unchanged,
+bringing the retained archive to 13 folders. The CPPF4 review restores Person
+Class as a new active starter/reference pair without removing or changing the
+historical archive. The intended original catalog sequence is Point concepts,
+required Person, the supplied member-initializer lesson, then required Cat.
+The source inventory now has 30 active and 13 historical/support folders.
+Matching application links and browser workflow verification are pending in
+the coordinated classes-module change; source publication alone does not
+establish application delivery.

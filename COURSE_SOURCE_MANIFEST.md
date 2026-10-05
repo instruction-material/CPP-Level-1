@@ -9,26 +9,27 @@ Canonical source repository: `CPP-Level-1`
 ## Verification Gate
 
 Run `bash verify-course-source.sh` with Python 3 and a C++20 compiler. The gate
-compiles all 45 active native targets, including the eight reviewed
-starter/reference packs. The eight reviewed project packs and their legacy entry
+compiles all 50 active native targets, including the ten reviewed
+starter/reference packs. The ten reviewed project packs and their legacy entry
 points compile with warnings treated as errors. Independent console contracts
 cover incomplete starters, all 50 Fizz Buzz outputs, all nine game matchups,
 text input, numeric boundaries, zero-count averages and rejection behavior.
 Function contracts additionally cover restored math
 practice, random outcome domains, two independent dice, same-library seed
 repeatability, initialized guess input, early wins and a five-guess loss.
-Eight references additionally run under AddressSanitizer/UndefinedBehaviorSanitizer.
+Ten project references additionally run under AddressSanitizer/UndefinedBehaviorSanitizer.
 `SOURCE_SANITIZERS=0` explicitly opts out if the local compiler lacks support;
 it must not be presented as an instrumented pass. Hosted CI requires sanitizers.
 
-Compilation of CPPF4-CPPF8 folders is an inventory gate, not behavioral certification.
+Compilation of CPPF5-CPPF8 folders is an inventory gate, not behavioral certification.
 The supplied CPPF1/CPPF2 type/loop and CPPF3 randomness references
 also have README contracts
-and independently checked output fixtures. The following eight project packs
+and independently checked output fixtures. The following ten project packs
 have assignment-specific starter/reference review:
 Mad Libs, Chat Bot, Number Games, Rock/Paper/Scissors, Fizz Buzz, Function
-Practice, Probability Events and Random, and Number Guesser. Each uses
-`starter/main.cpp` plus `starter/README.md` and a separate `solution` folder.
+Practice, Probability Events and Random, and Number Guesser, Person Class and Cat Class. Each uses
+`starter/main.cpp` plus `starter/README.md` and a separate `solution` folder. Class packs also
+include their matching header and implementation files.
 Their root `main.cpp` is a reference compatibility entry, never learner starter
 code. Other source-role and content findings remain under active review.
 
@@ -52,6 +53,7 @@ program. It does not link unrelated `main` functions or inactive archive folders
 | `CPPF3-Probability-Functions` |
 | `CPPF3-rand-Reference` |
 | `CPPF4-Cat-Class` |
+| `CPPF4-Person-Class` |
 | `CPPF4-Person-Class-with-BMI` |
 | `CPPF4-Point-Class` |
 | `CPPF5-Bank-Accounts` |
@@ -71,7 +73,13 @@ program. It does not link unrelated `main` functions or inactive archive folders
 
 ## Source Inventory
 
-- Source course-folder inventory: 42
-- Active linked folders: 29
+- Source course-folder inventory: 43
+- Active linked folders: 30
 - Ledgered inactive/support folders: 13
 - Source-like files: counted by the verification gate; generated binaries are excluded.
+
+CPPF4 contracts cover every public method, independent/copy state, height
+formatting, exact Cat age pluralization and printed actions, private-access
+rejection and multi-file linking. The Point and member-initializer examples
+are complete supplied references. Both Person forms retain the same public
+API and checked driver output. Original archived Person source is unchanged.

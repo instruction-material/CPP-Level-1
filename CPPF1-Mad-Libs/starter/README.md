@@ -1,13 +1,13 @@
 # CPPF1 Project 1: Mad Libs
 
 Use four string variables and console input to build a short story. This preserves
-the original Juni project goal: collect words and combine them into readable text.
+the original project goal: collect words and combine them into readable text.
 The required project belongs in CPPF1 after variables, strings and stream input.
 
 ## Workspace and native run
 
 Start in `starter`, which contains an incomplete `main.cpp` and this brief. The
-initial program prints a TODO reminder and exits with status 2. Finish the TODOs
+initial program prints a starter reminder and exits with status 2. Finish the TODOs
 in `main`; a successful completed run returns 0. Open `solution` only after a
 working attempt. The legacy root `main.cpp` forwards to the corrected reference
 for old direct build links; importing the whole root is not a starter workflow.

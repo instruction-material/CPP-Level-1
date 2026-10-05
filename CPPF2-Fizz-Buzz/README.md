@@ -1,13 +1,13 @@
 # CPPF2 Project 3: Fizz Buzz
 
 Print the integers 1 through 50 with divisibility substitutions. This required
-original Juni project combines a counted loop, remainder and ordered branching.
+original project combines a counted loop, remainder and ordered branching.
 
 ## Workspace and native run
 
 Open `starter/main.cpp` first. Its counted loop is supplied; implement the
 decision and output inside the loop. The starter prints no result lines, reports
-its TODO on the error stream and returns 2. A completed version returns 0. Compare
+its starter reminder on the error stream and returns 2. A completed version returns 0. Compare
 with `solution` after a working attempt. The legacy root `main.cpp` forwards to
 the corrected reference, which safely prints ordinary integer values.
 

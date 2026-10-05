@@ -1,7 +1,7 @@
 # CPPF2 Project 1: Number Games
 
 Practice both `for` and `while` loops by printing an inclusive integer range and
-computing sums and averages. This required project preserves the original Juni
+computing sums and averages. This required project preserves the original
 range-printing and two-loop goals; a sum alone does not complete the range task.
 
 ## Workspace and native run

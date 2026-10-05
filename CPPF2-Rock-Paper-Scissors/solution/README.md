@@ -1,12 +1,12 @@
 # CPPF2 Project 2: Rock, Paper, Scissors
 
 Use nested conditionals and Boolean expressions to choose the outcome of one
-two-player round. This is a required original Juni project in CPPF2. Randomness
+two-player round. This is a required original project in CPPF2. Randomness
 and computer opponents belong to later extensions, not this completion contract.
 
 ## Workspace and native run
 
-Implement `starter/main.cpp` first. Its TODO reminder returns 2 until the program
+Implement `starter/main.cpp` first. Its starter reminder returns 2 until the program
 is completed. Keep decisions inside `main` for this conditionals lesson. Review
 the separate `solution` after a working attempt. The root entry forwards to that
 reference for old build links; import `starter`, not the mixed root.
@@ -48,12 +48,12 @@ paper and paper beats rock; print `Player 1 wins!` or `Player 2 wins!`.
 ## Walkthrough and verification
 
 1. Read both tokens into separate strings and trace the stored values.
-2. Check input success, then validate the allowed-choice domain. Predict how a
-   capitalized choice such as `Rock` should behave.
+2. Check input success, then validate the allowed-choice domain. Explain why a
+   capitalized choice such as `Rock` is rejected.
 3. Handle equal choices, then use nested conditions for each remaining matchup.
 4. Test all nine table cells, an invalid first choice, an invalid second choice,
    both invalid choices, empty input and input containing only one choice.
 5. Present a branch trace for a win, a loss, a tie and an invalid round.
 
-Self-check: swapping the two players should swap the winning player while ties
+Self-check: swapping the two players swaps the winning player while ties
 stay ties. Validation must happen before the winner logic.

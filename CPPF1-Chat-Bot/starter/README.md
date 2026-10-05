@@ -2,7 +2,7 @@
 
 Build a text chatbot that greets a name, inserts a sneeze into a sentence, converts
 Fahrenheit to Celsius, and computes a sample currency conversion. These are the
-original Juni string and arithmetic goals. This required project follows Mad Libs.
+original string and arithmetic goals. This required project follows Mad Libs.
 
 ## Workspace and native run
 

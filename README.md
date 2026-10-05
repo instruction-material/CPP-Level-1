@@ -25,14 +25,14 @@ Cleanup rules applied here:
 
 ## Reviewed foundation projects
 
-The first two modules' five projects have self-contained briefs and separate
+The first three modules' eight projects have self-contained briefs and separate
 incomplete starter/reference folders. Start in `starter`, complete its TODOs,
 then compare with `solution`. The root `main.cpp` forwards to the corrected
 reference for compatibility with old direct build links. Do not import the
 mixed project root as a starter.
 
-Run `bash verify-course-source.sh` with Python 3 and C++20. It compiles all 40
-active native targets and checks the first five projects' console behavior and
+Run `bash verify-course-source.sh` with Python 3 and C++20. It compiles all 45
+active native targets and checks the eight reviewed projects' console behavior and
 starter boundaries. Hosted CI also checks every separate CMake target. Other
 course folders have compilation coverage but await assignment-specific behavior
 and role review; see `SOURCE_PACK_REVIEW.md`.

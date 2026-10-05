@@ -66,14 +66,16 @@ class FoundationContracts(unittest.TestCase):
                 key = folder + ("/" + part if part else "")
                 output = Path(cls.temporary.name) / key.replace("/", "-")
                 flags = ["-std=c++20", "-Wall", "-Wextra", "-Wpedantic"]
-                if folder in REVIEWED:
+                if folder in REVIEWED or folder in [
+                        "CPPF3-Function-Practice", "CPPF3-Probability-Functions",
+                        "CPPF3-Number-Guesser", "CPPF3-rand-Reference"]:
                     flags.append("-Werror")
                 code, out, err = execute([compiler, *flags, "-I", str(directory),
                                          *map(str, sources), "-o", str(output)])
                 assert code == 0, f"{key}: {out}{err}"
                 cls.binaries[key] = output
-        assert len(cls.binaries) == 40, len(cls.binaries)
-        print("Compiled all 40 active native targets; the first five packs are warning-clean.", flush=True)
+        assert len(cls.binaries) == 45, len(cls.binaries)
+        print("Compiled all 45 active native targets; the eight reviewed packs and random reference are warning-clean.", flush=True)
         if os.environ.get("SOURCE_SANITIZERS", "1") == "1":
             for folder in REVIEWED:
                 source = ROOT / folder / "solution/main.cpp"

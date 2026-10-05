@@ -9,20 +9,25 @@ Canonical source repository: `CPP-Level-1`
 ## Verification Gate
 
 Run `bash verify-course-source.sh` with Python 3 and a C++20 compiler. The gate
-compiles all 40 active native targets: 30 retained roots/supplements and 10 new
-starter/reference targets. The first five project packs and their legacy entry
+compiles all 45 active native targets, including the eight reviewed
+starter/reference packs. The eight reviewed project packs and their legacy entry
 points compile with warnings treated as errors. Independent console contracts
 cover incomplete starters, all 50 Fizz Buzz outputs, all nine game matchups,
 text input, numeric boundaries, zero-count averages and rejection behavior.
-Five references additionally run under AddressSanitizer/UndefinedBehaviorSanitizer.
+Function contracts additionally cover restored math
+practice, random outcome domains, two independent dice, same-library seed
+repeatability, initialized guess input, early wins and a five-guess loss.
+Eight references additionally run under AddressSanitizer/UndefinedBehaviorSanitizer.
 `SOURCE_SANITIZERS=0` explicitly opts out if the local compiler lacks support;
 it must not be presented as an instrumented pass. Hosted CI requires sanitizers.
 
-Compilation of later folders is an inventory gate, not behavioral certification.
-The three supplied CPPF1/CPPF2 type/loop references also have README contracts
-and independently checked output fixtures. The following five project packs
+Compilation of CPPF4-CPPF8 folders is an inventory gate, not behavioral certification.
+The supplied CPPF1/CPPF2 type/loop and CPPF3 randomness references
+also have README contracts
+and independently checked output fixtures. The following eight project packs
 have assignment-specific starter/reference review:
-Mad Libs, Chat Bot, Number Games, Rock/Paper/Scissors and Fizz Buzz. Each uses
+Mad Libs, Chat Bot, Number Games, Rock/Paper/Scissors, Fizz Buzz, Function
+Practice, Probability Events and Random, and Number Guesser. Each uses
 `starter/main.cpp` plus `starter/README.md` and a separate `solution` folder.
 Their root `main.cpp` is a reference compatibility entry, never learner starter
 code. Other source-role and content findings remain under active review.
@@ -42,7 +47,7 @@ program. It does not link unrelated `main` functions or inactive archive folders
 | `CPPF2-Number-Games` |
 | `CPPF2-Rock-Paper-Scissors` |
 | `CPPF2-While-Loop-Practice` |
-| `CPPF3-Functions-Supplemental-2` |
+| `CPPF3-Function-Practice` |
 | `CPPF3-Number-Guesser` |
 | `CPPF3-Probability-Functions` |
 | `CPPF3-rand-Reference` |
@@ -66,7 +71,7 @@ program. It does not link unrelated `main` functions or inactive archive folders
 
 ## Source Inventory
 
-- Source course-folder inventory: 41
+- Source course-folder inventory: 42
 - Active linked folders: 29
-- Ledgered inactive/support folders: 12
+- Ledgered inactive/support folders: 13
 - Source-like files: counted by the verification gate; generated binaries are excluded.

@@ -57,6 +57,6 @@ c++ -std=c++20 -Wall -Wextra -Wpedantic main.cpp -o project
 ```
 
 Select just one project folder at a time. Save and export edits before comparing
-with the reference. A compiler error should be resolved before running the
+with the reference. Resolve compiler errors before running the
 program. Instructor walkthroughs can pause at the same trace, function and test
 checkpoints; the brief also contains the information needed for independent work.

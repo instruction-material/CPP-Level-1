@@ -11,7 +11,7 @@ int calcTotalBalance(const std::vector<int>& transactions);
 
 bool readInteger(int& value) {
     std::string token;
-    if (!(std::cin >> token) || token.size() > 64) return false;
+    if (!(std::cin >> token)) return false;
     std::istringstream input(token);
     char extra;
     return static_cast<bool>(input >> value) && !(input >> extra);

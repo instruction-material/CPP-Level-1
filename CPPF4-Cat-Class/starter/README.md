@@ -57,6 +57,6 @@ does not define missing methods or link implementations. An undefined-reference
 error can mean a declared method has no definition or `cat.cpp` was omitted.
 Resolve compiler/linker errors before running the program. At the root, `make`
 builds only `solution`; `make PART=starter` builds only the starter. Never compile
-root, starter and solution copies together. Each learner can trace the same
+root, starter and solution copies together. Trace the same
 constructor, method, state-change and test checkpoints during independent work
 or a walkthrough with a course facilitator.

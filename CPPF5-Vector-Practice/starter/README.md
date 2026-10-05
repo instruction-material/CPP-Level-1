@@ -49,7 +49,7 @@ the original unchanged; define its empty and no-match cases before implementing 
 
 ## Starter, reference and native workflow
 
-Import only `starter` after confirming the site IDE import. Implement one TODO
+Import only `starter` after confirming the site IDE import. Implement one `TODO`
 at a time and test it before continuing. The incomplete starter builds, prints
 a reminder to stderr and exits with status 2; it supplies no completed results.
 Save/export the attempt before comparing with the separate `solution` reference.

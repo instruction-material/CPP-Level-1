@@ -9,25 +9,25 @@ Canonical source repository: `CPP-Level-1`
 ## Verification Gate
 
 Run `bash verify-course-source.sh` with Python 3 and a C++20 compiler. The gate
-compiles all 50 active native targets, including the ten reviewed
-starter/reference packs. The ten reviewed project packs and their legacy entry
+compiles all 54 active native targets, including the twelve reviewed
+starter/reference packs. The twelve reviewed project packs and their legacy entry
 points compile with warnings treated as errors. Independent console contracts
 cover incomplete starters, all 50 Fizz Buzz outputs, all nine game matchups,
 text input, numeric boundaries, zero-count averages and rejection behavior.
 Function contracts additionally cover restored math
 practice, random outcome domains, two independent dice, same-library seed
 repeatability, initialized guess input, early wins and a five-guess loss.
-Ten project references additionally run under AddressSanitizer/UndefinedBehaviorSanitizer.
+Twelve project references additionally run under AddressSanitizer/UndefinedBehaviorSanitizer.
 `SOURCE_SANITIZERS=0` explicitly opts out if the local compiler lacks support;
 it must not be presented as an instrumented pass. Hosted CI requires sanitizers.
 
-Compilation of CPPF5-CPPF8 folders is an inventory gate, not behavioral certification.
+Compilation of CPPF6-CPPF8 folders is an inventory gate, not behavioral certification.
 The supplied CPPF1/CPPF2 type/loop and CPPF3 randomness references
 also have README contracts
-and independently checked output fixtures. The following ten project packs
+and independently checked output fixtures. The following twelve project packs
 have assignment-specific starter/reference review:
 Mad Libs, Chat Bot, Number Games, Rock/Paper/Scissors, Fizz Buzz, Function
-Practice, Probability Events and Random, and Number Guesser, Person Class and Cat Class. Each uses
+Practice, Probability Events and Random, and Number Guesser, Person Class, Cat Class, Vector Practice and Bank Accounts. Each uses
 `starter/main.cpp` plus `starter/README.md` and a separate `solution` folder. Class packs also
 include their matching header and implementation files.
 Their root `main.cpp` is a reference compatibility entry, never learner starter
@@ -83,3 +83,10 @@ formatting, exact Cat age pluralization and printed actions, private-access
 rejection and multi-file linking. The Point and member-initializer examples
 are complete supplied references. Both Person forms retain the same public
 API and checked driver output. Original archived Person source is unchanged.
+
+CPPF5 contracts cover empty/singleton/matching-end vectors, signed bounded sums,
+ASCII byte lengths, unchanged helper inputs and the supplied vector lesson output.
+Bank Accounts validates complete integer tokens, count/amount limits and every
+missing/invalid input phase before reporting a balance. Zero transactions and
+negative withdrawals remain valid. Authored limits establish safe int sums;
+arbitrary unbounded or Unicode inputs are outside the exercise contracts.

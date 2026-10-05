@@ -15,6 +15,9 @@
 | Person Class | Header/source split, constructors, private state and accessors | Every public method, defaults, height formatting, setters, copy independence, private-access rejection and equivalent member-initializer lesson |
 | Cat Class | Constructors, member initialization and interacting methods | Authored defaults, signed-age updates, exact age-one pluralization bonus, breed independence, meow/eat/pet actions and copy independence |
 
+| Vector Practice | Growable sequences and const-reference summaries | Empty/end comparisons, bounded signed sums, ASCII lengths, input preservation and supplied lesson output |
+| Bank Accounts | Bounded transaction collection and summary function | Complete integer tokens, zero/negative amounts, both limits, count limits and cancellation before any claimed balance |
+
 Every listed pack has an intentionally incomplete starter, a separate reference,
 a matching self-contained README and a warning-clean C++20 native build. Legacy
 root entries forward to the corrected references. Native tests also exercise
@@ -22,22 +25,22 @@ sanitized references. References are not learner imports.
 
 ## Remaining audit scope
 
-Compilation alone does not certify the later CPPF5–CPPF8 contracts or starter
+Compilation alone does not certify the later CPPF6–CPPF8 contracts or starter
 roles. Their source review remains open, as do later duplicate assignment links.
 The unrelated
 CPPF1 variable/vector transformation wrapper was moved byte-for-byte to the
 inactive archive; it is not a beginner input/output assignment. Its duplicate
 CPPF3 wrapper is also archived byte-for-byte because it introduces vector and
 reference operations ahead of their modules without a functions-specific brief.
-The first four
+The first five
 modules' site links and briefs must point to the reviewed nested folders before
 this source work establishes an end-to-end learner workflow. Source publication
 alone does not prove application deployment.
 
 ## Fidelity
 
-The ten core project names and learning goals are preserved from the original
-Juni C++ Level 1 catalog. Safety checks and explicit console fixtures are authored
+The first four modules' ten core project names and learning goals are preserved
+from the original Juni C++ Level 1 catalog. Safety checks and explicit console fixtures are authored
 clarifications. The sample exchange rate is fixed fictional exercise data. The
 original Fizz Buzz optional custom-divisor bonus remains an extension; the
 reference gate covers only the required fixed 3-and-5 version.
@@ -59,3 +62,12 @@ The historical BMI name means member initialization, not body mass index.
 The supplied initializer lesson changes constructors while preserving the
 complete Person interface and checked output. Source review does not certify
 the pending application import/export workflow until its browser gate passes.
+
+CPPF5 keeps the deliberate vectors-first module from the current source
+restructuring; the historical raw-memory module remains in Level 2. Integer
+collection/count/amount limits and ASCII-only length semantics are authored
+clarifications, not inherited financial or Unicode policies. The original Vector
+Practice output and Bank Accounts zero/withdrawal goals are retained. A missing,
+malformed or out-of-range requested value now cancels before any claimed balance.
+The complete vector example retains its exact original program bytes. Application
+briefs, source pins and browser workflow coverage remain a separate pending gate.

@@ -70,14 +70,16 @@ class FoundationContracts(unittest.TestCase):
                         "CPPF3-Function-Practice", "CPPF3-Probability-Functions",
                         "CPPF3-Number-Guesser", "CPPF3-rand-Reference",
                         "CPPF4-Person-Class", "CPPF4-Cat-Class",
-                        "CPPF4-Person-Class-with-BMI", "CPPF4-Point-Class"]:
+                        "CPPF4-Person-Class-with-BMI", "CPPF4-Point-Class",
+                        "CPPF5-Vector-Practice", "CPPF5-Bank-Accounts",
+                        "CPPF5-Vectors-Reference"]:
                     flags.append("-Werror")
                 code, out, err = execute([compiler, *flags, "-I", str(directory),
                                          *map(str, sources), "-o", str(output)])
                 assert code == 0, f"{key}: {out}{err}"
                 cls.binaries[key] = output
-        assert len(cls.binaries) == 50, len(cls.binaries)
-        print("Compiled all 50 active native targets; the ten reviewed packs and class/random lesson references are warning-clean.", flush=True)
+        assert len(cls.binaries) == 54, len(cls.binaries)
+        print("Compiled all 54 active native targets; twelve reviewed packs and their supplied lesson references are warning-clean.", flush=True)
         if os.environ.get("SOURCE_SANITIZERS", "1") == "1":
             for folder in REVIEWED:
                 source = ROOT / folder / "solution/main.cpp"

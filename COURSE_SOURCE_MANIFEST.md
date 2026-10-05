@@ -8,9 +8,27 @@ Canonical source repository: `CPP-Level-1`
 
 ## Verification Gate
 
-- Run `./verify-course-source.sh` from this repository root before treating the source pack as ready.
-- The verification gate checks for this manifest, the source backlog ledger, source-like files, removed Replit metadata, and any repo-specific readiness files.
-- Project-specific unit tests or build commands should still be run inside individual project folders when a project includes its own test harness.
+Run `bash verify-course-source.sh` with Python 3 and a C++20 compiler. The gate
+compiles all 40 active native targets: 30 retained roots/supplements and 10 new
+starter/reference targets. The first five project packs and their legacy entry
+points compile with warnings treated as errors. Independent console contracts
+cover incomplete starters, all 50 Fizz Buzz outputs, all nine game matchups,
+text input, numeric boundaries, zero-count averages and rejection behavior.
+Five references additionally run under AddressSanitizer/UndefinedBehaviorSanitizer.
+`SOURCE_SANITIZERS=0` explicitly opts out if the local compiler lacks support;
+it must not be presented as an instrumented pass. Hosted CI requires sanitizers.
+
+Compilation of later folders is an inventory gate, not behavioral certification.
+The three supplied CPPF1/CPPF2 type/loop references also have README contracts
+and independently checked output fixtures. The following five project packs
+have assignment-specific starter/reference review:
+Mad Libs, Chat Bot, Number Games, Rock/Paper/Scissors and Fizz Buzz. Each uses
+`starter/main.cpp` plus `starter/README.md` and a separate `solution` folder.
+Their root `main.cpp` is a reference compatibility entry, never learner starter
+code. Other source-role and content findings remain under active review.
+
+CMake 3.20+ configures one independent C++20 target for each root/starter/solution
+program. It does not link unrelated `main` functions or inactive archive folders.
 
 ## Active Catalog Targets
 
@@ -19,7 +37,6 @@ Canonical source repository: `CPP-Level-1`
 | `CPPF1-Chat-Bot` |
 | `CPPF1-Mad-Libs` |
 | `CPPF1-Primitive-Types-and-Strings-Reference` |
-| `CPPF1-Variables-Types-and-Input-and-Output-Supplemental-2` |
 | `CPPF2-Fizz-Buzz` |
 | `CPPF2-For-Loop-Practice` |
 | `CPPF2-Number-Games` |
@@ -49,7 +66,7 @@ Canonical source repository: `CPP-Level-1`
 
 ## Source Inventory
 
-- Top-level folders: 41
-- Active linked folders: 30
-- Ledgered inactive/support folders: 11
-- Source-like files: 74
+- Source course-folder inventory: 41
+- Active linked folders: 29
+- Ledgered inactive/support folders: 12
+- Source-like files: counted by the verification gate; generated binaries are excluded.

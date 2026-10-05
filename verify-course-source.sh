@@ -29,3 +29,5 @@ source_count="$(find . \
 [ "$source_count" -gt 0 ] || fail "no source-like files found"
 
 printf 'course source verification passed: %s source-like files\n' "$source_count"
+
+PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -p "test_*.py" -v

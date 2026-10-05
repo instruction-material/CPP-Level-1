@@ -107,6 +107,10 @@ assert(sumLetters({std::string(1000000, 'x')}) == 1000000);
                 self.assertEqual(out.count('You have a balance'), 1)
                 self.assertTrue(out.endswith(f'You have a balance of ${sum(amounts)} in your account at this time. Thank you!\n'), out)
         self.assertIn('balance of $5 ', self.run_bank('+2 +10 -5 ignored'))
+        leading_zeroes = '0' * 70
+        self.assertIn('balance of $5 ', self.run_bank(leading_zeroes + '2 ' +
+            leading_zeroes + '10 -' + leading_zeroes + '5'))
+        self.assertIn('balance of $0 ', self.run_bank(leading_zeroes + '0'))
 
     def test_bank_count_failure_never_allocates_or_reports_balance(self):
         for text in ['', '-1', '1001', '2147483647', '999999999999999999999',

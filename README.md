@@ -22,3 +22,20 @@ Cleanup rules applied here:
 - macOS debug bundles such as `*.dSYM`
 - local IDE folders such as `.idea/`
 - local CMake build trees such as `cmake-build-debug/`
+
+## Reviewed foundation projects
+
+The first two modules' five projects have self-contained briefs and separate
+incomplete starter/reference folders. Start in `starter`, complete its TODOs,
+then compare with `solution`. The root `main.cpp` forwards to the corrected
+reference for compatibility with old direct build links. Do not import the
+mixed project root as a starter.
+
+Run `bash verify-course-source.sh` with Python 3 and C++20. It compiles all 40
+active native targets and checks the first five projects' console behavior and
+starter boundaries. Hosted CI also checks every separate CMake target. Other
+course folders have compilation coverage but await assignment-specific behavior
+and role review; see `SOURCE_PACK_REVIEW.md`.
+
+The site C++ IDE imports, edits, saves and exports files; run the downloaded
+programs with the native compiler commands in each brief.

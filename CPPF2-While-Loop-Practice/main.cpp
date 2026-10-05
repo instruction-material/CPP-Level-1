@@ -1,12 +1,6 @@
 #include <iostream>
 #include <string>
 
-bool done() {
-    for (int x = 0; x < 100000; ++x) {
-    }
-    return true;
-}
-
 int main() {
     int i = 0;
     while (i <= 10) {
@@ -19,9 +13,6 @@ int main() {
         std::cout << i << std::endl;
         i += 2;
     }
-
-    // while (!done()) {
-    // }
 
     i = 10;
     while (i >= 0) {

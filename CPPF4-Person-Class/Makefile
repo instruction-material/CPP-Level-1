@@ -3,7 +3,7 @@ all: main
 PART ?= solution
 CXX ?= c++
 CXXFLAGS ?= -std=c++20 -Wall -Wextra -Wpedantic
-SRCS = $(addprefix $(PART)/,main.cpp cat.cpp)
+SRCS = $(addprefix $(PART)/,main.cpp person.cpp)
 main: $(SRCS)
 	$(CXX) $(CXXFLAGS) $(SRCS) -o $@
 clean:

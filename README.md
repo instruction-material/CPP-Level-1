@@ -25,17 +25,16 @@ Cleanup rules applied here:
 
 ## Reviewed foundation projects
 
-The first seven modules' seventeen projects have self-contained briefs and separate
+The eight modules' nineteen projects have self-contained briefs and separate
 incomplete starter/reference folders. Start in `starter`, complete its TODOs,
 then compare with `solution`. The root `main.cpp` forwards to the corrected
 reference for compatibility with old direct build links. Do not import the
 mixed project root as a starter.
 
-Run `bash verify-course-source.sh` with Python 3 and C++20. It compiles all 64
-active native targets and checks the seventeen reviewed projects' console behavior and
-starter boundaries. Hosted CI also checks every separate CMake target. Other
-course folders have compilation coverage but await assignment-specific behavior
-and role review; see `SOURCE_PACK_REVIEW.md`.
+Run `bash verify-course-source.sh` with Python 3 and C++20. It compiles all 68
+active native targets and checks the nineteen reviewed projects' console behavior and
+starter boundaries. Hosted CI also checks every separate CMake target. Supplied lessons and retained reinforcement folders remain separate from
+learner packs; later course levels retain their own audit scope; see `SOURCE_PACK_REVIEW.md`.
 
 The site C++ IDE imports, edits, saves and exports files; run the downloaded
 programs with the native compiler commands in each brief.
@@ -61,5 +60,7 @@ CPPF7 keeps Matrix Addition required and Grid Statistics optional, with distinct
 incomplete starters and reference programs. Matrix input validates both
 dimensions before allocation and every bounded cell before printing a sum. Grid
 helpers state rectangular, empty, zero-column and bounded-number preconditions.
-The supplied 2D-vector lesson retains its original program bytes. CPPF8 source
-contracts and both modules' application imports remain separate pending work.
+The supplied 2D-vector lesson retains its original program bytes. CPPF8 now has a required interactive multi-file capstone and a distinct optional
+scripted state-machine extension. Their authored model limits prevent unchecked
+signed heart arithmetic. CPPF8 application brief, source-pin and actual browser
+import/export review remains pending. Source publication does not prove deployment.

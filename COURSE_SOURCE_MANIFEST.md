@@ -9,26 +9,29 @@ Canonical source repository: `CPP-Level-1`
 ## Verification Gate
 
 Run `bash verify-course-source.sh` with Python 3 and a C++20 compiler. The gate
-compiles all 60 active native targets, including the fifteen reviewed
-starter/reference packs. The fifteen reviewed project packs and their legacy entry
+compiles all 68 active native targets, including the nineteen reviewed
+starter/reference packs. The nineteen reviewed project packs and their legacy entry
 points compile with warnings treated as errors. Independent console contracts
 cover incomplete starters, all 50 Fizz Buzz outputs, all nine game matchups,
 text input, numeric boundaries, zero-count averages and rejection behavior.
 Function contracts additionally cover restored math
 practice, random outcome domains, two independent dice, same-library seed
 repeatability, initialized guess input, early wins and a five-guess loss.
-Twelve project references additionally run under AddressSanitizer/UndefinedBehaviorSanitizer.
+Reference contracts also run under AddressSanitizer/UndefinedBehaviorSanitizer,
+including multi-file Profile model and explicit-mode transition harnesses.
 `SOURCE_SANITIZERS=0` explicitly opts out if the local compiler lacks support;
 it must not be presented as an instrumented pass. Hosted CI requires sanitizers.
 
-Compilation of CPPF7-CPPF8 folders is an inventory gate, not behavioral certification.
+CPPF7 and CPPF8 now have independent assignment-specific behavior contracts.
+Compilation alone remains insufficient for application import/export or deployment.
 The supplied CPPF1/CPPF2 type/loop and CPPF3 randomness references
 also have README contracts
-and independently checked output fixtures. The following fifteen project packs
+and independently checked output fixtures. The following nineteen project packs
 have assignment-specific starter/reference review:
 Mad Libs, Chat Bot, Number Games, Rock/Paper/Scissors, Fizz Buzz, Function
 Practice, Probability Events and Random, and Number Guesser, Person Class, Cat Class, Vector Practice, Bank Accounts, Parameter Passing Tracing, Defanging a Website
-Address and Chaos Monkeys. Each uses
+Address, Chaos Monkeys, Matrix Addition, Grid Statistics, Profile Posts and
+Profile Posts State Machine. Each uses
 `starter/main.cpp` plus `starter/README.md` and a separate `solution` folder. Class packs also
 include their matching header and implementation files.
 Their root `main.cpp` is a reference compatibility entry, never learner starter

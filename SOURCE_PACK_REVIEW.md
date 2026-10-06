@@ -21,6 +21,8 @@
 | Chaos Monkeys | Growing-string loop bounds and parameter passing | Doubled ASCII size, original-byte order, copy/reference/observer boundaries and seeded repetition |
 | Matrix Addition | Required equal-dimension 2D-vector addition | Complete tokens, both dimension/cell limits, rectangular fixtures and cancellation before any claimed sum |
 | Grid Statistics | Optional const-reference grid summaries | Empty/zero-column/wide/tall grids, bounded sums, negative/tied maxima, unchanged inputs and exact driver output |
+| Profile Posts | Required multi-file interactive capstone | Complete-line commands, empty/fresh state, transactional add/update input, shifted indexes, bounded model mutations, const views and independent copies |
+| Profile Posts State Machine | Optional explicit-mode extension | Every named transition, state-dependent commands, empty edit guards, absorbing Quit, bounded changes and repeatable scripted driver |
 
 Every listed pack has an intentionally incomplete starter, a separate reference,
 a matching self-contained README and a warning-clean C++20 native build. Legacy
@@ -29,14 +31,16 @@ sanitized references. References are not learner imports.
 
 ## Remaining audit scope
 
-Compilation alone does not certify the remaining CPPF8 contracts or starter
-roles. That source review remains open, as do later duplicate assignment links.
+The nineteen listed source packs have assignment-specific behavior checks and
+separate starter/reference roles. Application catalog parity and browser import/
+export gates remain required, particularly the newly reviewed CPPF8 packs. Later
+course-level and duplicate-link audits remain separate work.
 The unrelated
 CPPF1 variable/vector transformation wrapper was moved byte-for-byte to the
 inactive archive; it is not a beginner input/output assignment. Its duplicate
 CPPF3 wrapper is also archived byte-for-byte because it introduces vector and
 reference operations ahead of their modules without a functions-specific brief.
-The first seven
+The eight
 modules' site links and briefs must point to the reviewed nested folders before
 this source work establishes an end-to-end learner workflow. Source publication
 alone does not prove application deployment.
@@ -105,3 +109,22 @@ claim that unsupported ragged inputs were previously promised. The complete grid
 lesson keeps its tracked program bytes. Both new project packs have equal full
 briefs, incomplete reminders and separate one-program builds. Application
 source pins, full brief parity and browser workflows remain pending.
+
+
+## CPPF8 profile capstone and explicit-mode extension
+
+The required capstone corrects the mismatch between the site completion contract
+and the old fixed three-post driver by implementing the interactive add/view/
+update/remove/total/quit loop. Original record fields, public method signatures
+and source filenames remain; a const size accessor supports observation. The
+model guards its own bounds, including extreme signed changes and indexes, while
+input stays in the driver. The two named core states do not duplicate the
+optional extension's three active modes plus Quit.
+
+Caption/count/heart bounds are authored teaching limits, not Juni or platform
+policy. The optional extension preserves the intentionally scripted classroom
+driver and original helper signatures. It now guards the previously unguarded
+empty ViewingPosts-to-edit transition and signed updates. User input remains a
+bonus in that optional exercise. Both complete briefs specify native builds and
+state diagrams; references remain separate from incomplete learner imports.
+Application publication and native deployment require their own gates.

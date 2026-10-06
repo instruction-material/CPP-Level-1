@@ -2,7 +2,7 @@
 
 ## Reviewed on 2026-10-05
 
-| Project | Required learning goal | Verified behavior |
+| Project | Learning goal | Verified behavior |
 | --- | --- | --- |
 | Mad Libs | Strings, token input, story construction | Word order, whitespace separators and incomplete-input cancellation |
 | Chat Bot | Full-line strings, insertion and arithmetic | Short/Unicode text, LF/CRLF, complete numeric lines, bounds and fixed-data conversions |
@@ -16,10 +16,11 @@
 | Cat Class | Constructors, member initialization and interacting methods | Authored defaults, signed-age updates, exact age-one pluralization bonus, breed independence, meow/eat/pet actions and copy independence |
 | Vector Practice | Growable sequences and const-reference summaries | Empty/end comparisons, bounded signed sums, ASCII lengths, input preservation and supplied lesson output |
 | Bank Accounts | Bounded transaction collection and summary function | Complete integer tokens, zero/negative amounts, both limits, count limits and cancellation before any claimed balance |
-
 | Parameter Passing Tracing | Predictions, copies, aliases and const observation | Every helper, correct copy prediction, separate/aliased caller state and rejected const mutation |
 | Defanging a Website Address | Mutable string reference versus returned value | Single-pass original-period expansion, empty/bracket/UTF-8 cases, preserved input and missing/overlength cancellation |
 | Chaos Monkeys | Growing-string loop bounds and parameter passing | Doubled ASCII size, original-byte order, copy/reference/observer boundaries and seeded repetition |
+| Matrix Addition | Required equal-dimension 2D-vector addition | Complete tokens, both dimension/cell limits, rectangular fixtures and cancellation before any claimed sum |
+| Grid Statistics | Optional const-reference grid summaries | Empty/zero-column/wide/tall grids, bounded sums, negative/tied maxima, unchanged inputs and exact driver output |
 
 Every listed pack has an intentionally incomplete starter, a separate reference,
 a matching self-contained README and a warning-clean C++20 native build. Legacy
@@ -28,14 +29,14 @@ sanitized references. References are not learner imports.
 
 ## Remaining audit scope
 
-Compilation alone does not certify the later CPPF7–CPPF8 contracts or starter
-roles. Their source review remains open, as do later duplicate assignment links.
+Compilation alone does not certify the remaining CPPF8 contracts or starter
+roles. That source review remains open, as do later duplicate assignment links.
 The unrelated
 CPPF1 variable/vector transformation wrapper was moved byte-for-byte to the
 inactive archive; it is not a beginner input/output assignment. Its duplicate
 CPPF3 wrapper is also archived byte-for-byte because it introduces vector and
 reference operations ahead of their modules without a functions-specific brief.
-The first six
+The first seven
 modules' site links and briefs must point to the reviewed nested folders before
 this source work establishes an end-to-end learner workflow. Source publication
 alone does not prove application deployment.
@@ -87,6 +88,20 @@ fixed original-size bound, and supplies a valid const observer. Its randomness
 claims are limited to the lowercase domain and within-library seeded repetition.
 No probability-uniformity or security guarantee is implied. Introduction/struct
 program bytes are retained; numeric phone fields are explicitly fictional
-historical example data. CPPF7/CPPF8 behavioral and application review remains
-open. Application source links and actual browser workflows remain required for
+historical example data. CPPF8 behavioral review remains open; CPPF7 application review is pending. Application source links and actual browser workflows remain required for
 end-to-end delivery of the reviewed CPPF6 packs.
+
+
+## CPPF7 grid projects
+
+Matrix Addition retains the current vectors-first structure and original row/
+column domain 1..100. Complete-token and cell bounds are authored clarifications;
+missing/invalid cells cancel before any claimed sum, correcting the observed
+zero-filled output and signed-overflow cases. Grid Statistics remains optional
+rectangular-grid practice. Its helper signatures, fixed driver output and
+row-major tie behavior are retained, with explicit empty/zero-column and bounded
+integer preconditions. Ragged-grid validation is still an extension, not a
+claim that unsupported ragged inputs were previously promised. The complete grid
+lesson keeps its tracked program bytes. Both new project packs have equal full
+briefs, incomplete reminders and separate one-program builds. Application
+source pins, full brief parity and browser workflows remain pending.

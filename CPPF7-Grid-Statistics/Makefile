@@ -1,15 +1,10 @@
+CXX ?= c++
+CXXFLAGS ?= -std=c++20 -Wall -Wextra -Wpedantic
+PART ?= solution
+
+.PHONY: all clean main
 all: main
-
-CXX = clang++
-override CXXFLAGS += -std=c++14 -Wall -Wextra -pedantic
-
-SRCS = $(shell find . -name '.ccls-cache' -type d -prune -o -type f -name '*.cpp' -print | sed -e 's/ /\\ /g')
-
-main: $(SRCS)
-	$(CXX) $(CXXFLAGS) $(SRCS) -o "$@"
-
-main-debug: $(SRCS)
-	$(CXX) $(CXXFLAGS) -g -O0 $(SRCS) -o "$@"
-
+main: $(PART)/main.cpp
+	$(CXX) $(CXXFLAGS) $(PART)/main.cpp -o main
 clean:
-	rm -f main main-debug
+	rm -f main

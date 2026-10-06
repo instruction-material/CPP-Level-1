@@ -14,9 +14,12 @@
 | Number Guesser | Range/answer/guess/game decomposition | Initialized first guess, early wins, five valid guesses, higher/lower feedback, range/guess cancellation and full signed-endpoint domains |
 | Person Class | Header/source split, constructors, private state and accessors | Every public method, defaults, height formatting, setters, copy independence, private-access rejection and equivalent member-initializer lesson |
 | Cat Class | Constructors, member initialization and interacting methods | Authored defaults, signed-age updates, exact age-one pluralization bonus, breed independence, meow/eat/pet actions and copy independence |
-
 | Vector Practice | Growable sequences and const-reference summaries | Empty/end comparisons, bounded signed sums, ASCII lengths, input preservation and supplied lesson output |
 | Bank Accounts | Bounded transaction collection and summary function | Complete integer tokens, zero/negative amounts, both limits, count limits and cancellation before any claimed balance |
+
+| Parameter Passing Tracing | Predictions, copies, aliases and const observation | Every helper, correct copy prediction, separate/aliased caller state and rejected const mutation |
+| Defanging a Website Address | Mutable string reference versus returned value | Single-pass original-period expansion, empty/bracket/UTF-8 cases, preserved input and missing/overlength cancellation |
+| Chaos Monkeys | Growing-string loop bounds and parameter passing | Doubled ASCII size, original-byte order, copy/reference/observer boundaries and seeded repetition |
 
 Every listed pack has an intentionally incomplete starter, a separate reference,
 a matching self-contained README and a warning-clean C++20 native build. Legacy
@@ -25,14 +28,14 @@ sanitized references. References are not learner imports.
 
 ## Remaining audit scope
 
-Compilation alone does not certify the later CPPF6–CPPF8 contracts or starter
+Compilation alone does not certify the later CPPF7–CPPF8 contracts or starter
 roles. Their source review remains open, as do later duplicate assignment links.
 The unrelated
 CPPF1 variable/vector transformation wrapper was moved byte-for-byte to the
 inactive archive; it is not a beginner input/output assignment. Its duplicate
 CPPF3 wrapper is also archived byte-for-byte because it introduces vector and
 reference operations ahead of their modules without a functions-specific brief.
-The first five
+The first six
 modules' site links and briefs must point to the reviewed nested folders before
 this source work establishes an end-to-end learner workflow. Source publication
 alone does not prove application deployment.
@@ -71,3 +74,19 @@ Practice output and Bank Accounts zero/withdrawal goals are retained. A missing,
 malformed or out-of-range requested value now cancels before any claimed balance.
 The complete vector example retains its exact original program bytes. Application
 briefs, source pins and browser workflow coverage remain a separate pending gate.
+
+CPPF6 preserves all three required projects from the original Juni catalog.
+The tracing starter deliberately provides helper bodies; prediction comments
+and the driver remain incomplete. Its reference now prints the correct unchanged
+copy value and calls the formerly omitted const-reference sum helper. Defanging
+keeps both original signatures, processes only original periods during a call
+and removes the unchecked size multiplication. Missing/overlength console input
+cancels before transformed results. The bounded token limit is authored exercise
+policy. Chaos explicitly includes random/time declarations, uses size_t and a
+fixed original-size bound, and supplies a valid const observer. Its randomness
+claims are limited to the lowercase domain and within-library seeded repetition.
+No probability-uniformity or security guarantee is implied. Introduction/struct
+program bytes are retained; numeric phone fields are explicitly fictional
+historical example data. CPPF7/CPPF8 behavioral and application review remains
+open. Application source links and actual browser workflows remain required for
+end-to-end delivery of the reviewed CPPF6 packs.

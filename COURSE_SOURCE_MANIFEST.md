@@ -9,8 +9,8 @@ Canonical source repository: `CPP-Level-1`
 ## Verification Gate
 
 Run `bash verify-course-source.sh` with Python 3 and a C++20 compiler. The gate
-compiles all 54 active native targets, including the twelve reviewed
-starter/reference packs. The twelve reviewed project packs and their legacy entry
+compiles all 60 active native targets, including the fifteen reviewed
+starter/reference packs. The fifteen reviewed project packs and their legacy entry
 points compile with warnings treated as errors. Independent console contracts
 cover incomplete starters, all 50 Fizz Buzz outputs, all nine game matchups,
 text input, numeric boundaries, zero-count averages and rejection behavior.
@@ -21,13 +21,14 @@ Twelve project references additionally run under AddressSanitizer/UndefinedBehav
 `SOURCE_SANITIZERS=0` explicitly opts out if the local compiler lacks support;
 it must not be presented as an instrumented pass. Hosted CI requires sanitizers.
 
-Compilation of CPPF6-CPPF8 folders is an inventory gate, not behavioral certification.
+Compilation of CPPF7-CPPF8 folders is an inventory gate, not behavioral certification.
 The supplied CPPF1/CPPF2 type/loop and CPPF3 randomness references
 also have README contracts
-and independently checked output fixtures. The following twelve project packs
+and independently checked output fixtures. The following fifteen project packs
 have assignment-specific starter/reference review:
 Mad Libs, Chat Bot, Number Games, Rock/Paper/Scissors, Fizz Buzz, Function
-Practice, Probability Events and Random, and Number Guesser, Person Class, Cat Class, Vector Practice and Bank Accounts. Each uses
+Practice, Probability Events and Random, and Number Guesser, Person Class, Cat Class, Vector Practice, Bank Accounts, Parameter Passing Tracing, Defanging a Website
+Address and Chaos Monkeys. Each uses
 `starter/main.cpp` plus `starter/README.md` and a separate `solution` folder. Class packs also
 include their matching header and implementation files.
 Their root `main.cpp` is a reference compatibility entry, never learner starter
@@ -90,3 +91,13 @@ Bank Accounts validates complete integer tokens, count/amount limits and every
 missing/invalid input phase before reporting a balance. Zero transactions and
 negative withdrawals remain valid. Authored limits establish safe int sums;
 arbitrary unbounded or Unicode inputs are outside the exercise contracts.
+
+CPPF6 contracts cover caller preservation/mutation, bounded sums and aliased
+arguments, const-mutation compiler rejection and all-helper driver coverage.
+Defanging handles original periods once, preserves other bytes, supports empty
+helper input and cancels missing/overlength console input. Chaos checks doubled
+ASCII size, original-byte order, local/caller/observer state and same-library
+seeded repetition. Complete introduction/struct lessons have exact output
+fixtures. Tracing intentionally supplies helpers; learner work is the prediction
+comments and unfinished driver. Application workflow verification remains
+separate from this source gate.

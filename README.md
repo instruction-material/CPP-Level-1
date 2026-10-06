@@ -25,14 +25,14 @@ Cleanup rules applied here:
 
 ## Reviewed foundation projects
 
-The first five modules' twelve projects have self-contained briefs and separate
+The first six modules' fifteen projects have self-contained briefs and separate
 incomplete starter/reference folders. Start in `starter`, complete its TODOs,
 then compare with `solution`. The root `main.cpp` forwards to the corrected
 reference for compatibility with old direct build links. Do not import the
 mixed project root as a starter.
 
-Run `bash verify-course-source.sh` with Python 3 and C++20. It compiles all 54
-active native targets and checks the twelve reviewed projects' console behavior and
+Run `bash verify-course-source.sh` with Python 3 and C++20. It compiles all 60
+active native targets and checks the fifteen reviewed projects' console behavior and
 starter boundaries. Hosted CI also checks every separate CMake target. Other
 course folders have compilation coverage but await assignment-specific behavior
 and role review; see `SOURCE_PACK_REVIEW.md`.
@@ -49,3 +49,10 @@ The vectors module retains Vector Practice and Bank Accounts as required project
 The complete vectors demonstration is a supplied lesson, while learner imports
 use incomplete nested packs. The bounded integer/ASCII exercise domains and
 invalid-input cancellation behavior are stated in their matching briefs.
+
+CPPF6 retains all three original required parameter-passing projects, including
+Chaos Monkeys. Tracing intentionally supplies helper functions for prediction
+and driver practice. Defanging transforms literal text once without visiting an
+address. Chaos uses an original-size bound and distinguishes copies, mutable
+aliases and a const observer. Complete introduction/struct examples remain
+supplied lessons. The old tracing-starter filename stays self-contained.

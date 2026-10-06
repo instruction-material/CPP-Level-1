@@ -23,3 +23,9 @@ The source inventory now has 30 active and 13 historical/support folders.
 Matching application links and browser workflow verification are pending in
 the coordinated classes-module change; source publication alone does not
 establish application delivery.
+
+The CPPF6 review retains the same 30 active and 13 historical/support folders.
+All three original required parameter-passing projects gain complete nested
+packs; the separate old tracing-starter filename stays self-contained. Complete
+introduction/struct programs remain lessons. Coordinated application restoration
+of the required Chaos Monkeys role and browser workflows remains pending.
